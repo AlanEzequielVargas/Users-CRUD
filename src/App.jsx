@@ -15,13 +15,13 @@ function App() {
 	const [modal, setModal] = useState(false);
 
 	useEffect(() => {
-		axios.get("https://users-crud1.herokuapp.com/users/").then((res) =>
+		axios.get("http://users-crud.academlo.tech/users/").then((res) =>
 			setList(res.data)
 		);
 	}, []);
 
 	function getUsers() {
-		axios.get("https://users-crud1.herokuapp.com/users/").then((res) =>
+		axios.get("http://users-crud.academlo.tech/users/").then((res) =>
 			setList(res.data)
 		);
 	}
@@ -44,7 +44,7 @@ function App() {
 		}).then((res) => {
 			if (res) {
 				axios.delete(
-					`https://users-crud1.herokuapp.com/users/${id}/`
+					`http://users-crud.academlo.tech/users/${id}/`
 				)
 					.then(() => getUsers())
 					.catch((error) => console.log(error.resonse.data));
