@@ -16,7 +16,7 @@ function App() {
 
 	useEffect(() => {
 
-		axios.get("http://users-crud.academlo.tech/users/").then((res) =>
+		axios.get("https://users-crud.academlo.tech/users/").then((res) =>
 
 			setList(res.data)
 		);
@@ -26,7 +26,7 @@ function App() {
 
 		
 
-		axios.get("http://users-crud.academlo.tech/users/").then((res) =>
+		axios.get("https://users-crud.academlo.tech/users/").then((res) =>
 
 			setList(res.data)
 		);
