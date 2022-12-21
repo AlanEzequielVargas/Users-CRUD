@@ -16,22 +16,20 @@ function App() {
 
 	useEffect(() => {
 
-		axios.get("https://users-crud.academlo.tech/users/").then((res) =>
-
 		axios.get("http://users-crud.academlo.tech/users/").then((res) =>
 
 			setList(res.data)
-		));
+		);
 	}, []);
 
 	function getUsers() {
 
-		axios.get("https://users-crud.academlo.tech/users/").then((res) =>
+		
 
 		axios.get("http://users-crud.academlo.tech/users/").then((res) =>
 
 			setList(res.data)
-		));
+		);
 	}
 
 	function selectUser(user) {
@@ -54,8 +52,6 @@ function App() {
 				axios.delete(
 
 					`https://users-crud.academlo.tech/users/${id}/`
-
-					`http://users-crud.academlo.tech/users/${id}/`
 
 				)
 					.then(() => getUsers())
