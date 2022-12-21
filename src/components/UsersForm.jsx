@@ -29,7 +29,7 @@ const UsersForm = ({
 	function submit(data) {
 		if (selectedUser) {
 			axios.put(
-				`https://users-crud1.herokuapp.com/users/${selectedUser.id}/`,
+				`https://users-crud.academlo.tech/users/${selectedUser.id}/`,
 				data
 			)
 				.then(() => getUsers(), deselectUser())
@@ -41,7 +41,7 @@ const UsersForm = ({
 				timer: "2000",
 			});
 		} else {
-			axios.post("https://users-crud1.herokuapp.com/users/", data)
+			axios.post("https://users-crud.academlo.tech/users/", data)
 				.then(() => getUsers())
 				.catch((error) => console.log(error.response?.data));
 			swal({
